@@ -1,0 +1,29 @@
+# Proxima b's parameters
+sName		    c_min			   # Body's name
+saModules 	atmesc
+
+# Physical Properties
+dMass		 -11.040405                   # Mallorquín et al. 204| (https://arxiv.org/pdf/2407.16461) | +3.24-3.42 Mass, negative -> Earth masses
+#dRadius         -2.7124057864 		           # Mallorquín et al. 204| (https://arxiv.org/pdf/2407.16461) | +0.18 -0.17 Earth Radii
+
+# Orbital Properties
+dEcc                   0.18	           # Wittrock et al. 2023 | +0.08-0.07 Eccentricity
+dOrbPeriod           -18.859023	 	   # Wittrock et al. 2023 | +0.000022-24 Semi-major axis, negative -> AU
+
+# ATMESC Properties
+dXFrac                      1.0             # X-Ray/XUV absorption radius (fraction of planet radius)
+#dSurfWaterMass            -0.0             # Initial surface water (Earth oceans)
+dEnvelopeMass              -0.12372           # Initial envelope mass (Earth masses)
+bHaltSurfaceDesiccated      0               # Halt when dry?
+bHaltEnvelopeGone           0               # Halt when evaporated?
+dMinSurfWaterMass          -1.e-5           # Planet is desiccated when water content drops below this (Earth oceans)
+dMinEnvelopeMass           -1.e-7
+sPlanetRadiusModel         LOPEZ12
+bAtmEscAuto                 1               # Is the flow radiation-recombination-limited?
+dThermTemp                  424.7           # Mallorquín et al. 204 | +24.2 -24.5, Albedo = 0 | Albedo=0.6 => 337.7 K +19.3-19.5
+
+
+#Output
+saOutputOrder Time -FXUV -PlanetRadius -EnvelopeMass Age -DEnvMassDt HEscapeRegime -Mass #-HZLimRecVenus -HZLimEarlyMars
+
+

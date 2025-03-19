@@ -1,0 +1,22 @@
+sName	                            star             # Body's name
+saModules	                  stellar flare     # Modules
+
+# Physical Parameters
+dMass               0.510        # Wittrock et al. 2023 | +0.028-0.027 | stellar mass
+dAge                10e6         # Assume star is 10 Myr old when disk disperses
+dRotPeriod	    -4.856       # Donati et al. 2023 (https://ui.adsabs.harvard.edu/abs/2023MNRAS.525..455D/abstract) | ±0.003 | Rotation period in days
+
+# STELLAR parameters
+sStellarModel        baraffe     # Stellar evolutin model: `baraffe` or `none`
+dSatXUVFrac          1.e-3.07    # Wright +2011 (https://vizier.cds.unistra.fr/viz-bin/VizieR-4) | https://ui.adsabs.harvard.edu/abs/2011ApJ...743...48W/abstract | Saturation level of the XUV luminosity
+dSatXUVTime               -0.149 #-0.86365
+
+#FLARE module
+dFlareMinEnergy          -1.0e28       # Min flare energy
+dFlareMaxEnergy          -1.0e34       # Max flare energy
+sFlareFFD                 hazmat       # flare frequency distribution evolution model
+dEnergyBin                1000         # Number of bins between min and max energy
+sFlareBandPass         xuv_feinstein2022
+
+#Ouput parameters
+saOutputOrder Time -Luminosity -LXUVTot -LXUVFlare Age -FlareFreqMin -FlareFreqMax -FlareEnergyMin -FlareEnergyMax -LXUVStellar

@@ -1,0 +1,26 @@
+# Proxima b's parameters
+sName		    b			   # Body's name
+saModules 	atmesc
+
+# Physical Properties
+dMass		 -9.0005#-8.99                     # Mallorquín et al. 204| (https://arxiv.org/pdf/2407.16461) | +2.61-2.67 Mass, negative -> Earth masses
+#dRadius         -4.79		           # Mallorquín et al. 204| (https://arxiv.org/pdf/2407.16461)| ±0.29 Earth Radii
+
+# Orbital Properties
+dEcc                  0.07         	   # Mallorquín et al. 204| (https://arxiv.org/pdf/2407.16461) | +0.09 - 0.04  | Eccentricity
+dOrbPeriod           -8.463446	 	   # Mallorquín et al. 204| (https://arxiv.org/pdf/2407.16461) | ± 0.000005
+
+# ATMESC Properties
+dXFrac                     1.0              # X-Ray/XUV absorption radius (fraction of planet radius)
+#dSurfWaterMass            0.0              # Initial surface water (Earth oceans) ∼1 Earth ocean (1.4 × 10ˆ24 g) source: https://iopscience.iop.org/article/10.3847/1538-4357/ab6224/pdf
+dEnvelopeMass              -0.789515#-0.4457             # Initial envelope mass (Earth masses)
+bHaltSurfaceDesiccated      0               # Halt when dry?
+bHaltEnvelopeGone           0               # Halt when evaporated?
+dMinSurfWaterMass          -1.e-5           # Planet is desiccated when water content drops below this (Earth oceans)
+dMinEnvelopeMass           -1.e-7
+sPlanetRadiusModel         LOPEZ12
+bAtmEscAuto                 1               # Is the flow radiation-recombination-limited?
+#dThermTemp 		   554.8            # Mallorquín et al. 204 | +31.6 -32, Albedo = 0 | Albedo=0.6 => 441.2 K +25.2-25.5
+
+#Output
+saOutputOrder Time -FXUV -PlanetRadius -EnvelopeMass Age -DEnvMassDt HEscapeRegime -Mass #-HZLimRecVenus -HZLimEarlyMars

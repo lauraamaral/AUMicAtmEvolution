@@ -1,0 +1,29 @@
+# Proxima b's parameters
+sName		    HZ			   # Body's name 
+saModules 	atmesc
+
+# Physical Properties
+dMass		 -1               # ± 0.511 Wittrock et al. 2023 (https://ui.adsabs.harvard.edu/abs/2023AJ....166..232W/abstract) | | ±0.511 Mass, negative -> Earth masses
+#dRadius          -1		   # ± 0.139 to have 1.22 g/cm3, need 3.50920072742 radii Earth Radii
+
+# Orbital Properties
+dEcc                0 	   # Wittrock et al. 2023 | ±0.00104 Eccentricity
+#dOrbPeriod        -81.31384290921082	   # Wittrock et al. 2023 | ±0.00793 Orbital period, negative -> days
+dSemi            -0.2934725219094104682 
+
+# ATMESC Properties
+dXFrac                      1.0             # X-Ray/XUV absorption radius (fraction of planet radius)
+#dSurfWaterMass              0.0             # Initial surface water (Earth oceans)
+dEnvelopeMass              -0.001075         # Initial envelope mass (Earth masses)
+bHaltSurfaceDesiccated      0               # Halt when dry?
+bHaltEnvelopeGone           0               # Halt when evaporated?
+dMinSurfWaterMass          -1.e-5           # Planet is desiccated when water content drops below this (Earth oceans)
+dMinEnvelopeMass           -1.e-7 
+sPlanetRadiusModel         PROXCEN
+bAtmEscAuto                 1               # Is the flow radiation-recombination-limited?
+#dThermTemp                  500             # 
+
+#Output
+saOutputOrder Time -FXUV -PlanetRadius -EnvelopeMass Age -DEnvMassDt HEscapeRegime #-HZLimRecVenus -HZLimEarlyMars
+
+
